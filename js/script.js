@@ -68,10 +68,15 @@ close.addEventListener('click', toggleOffNavbar);
 let appleInstallBtn = document.getElementById('apple-logo');
 let googleInstallBtn = document.getElementById('google-logo');
 
-console.log(appleInstallBtn);
-
 const toggleWorkingAlert = () => {
     alert('Sorry for the inconvenience! Working on our Mobile App!')
 }
 appleInstallBtn.addEventListener('click', toggleWorkingAlert);
 googleInstallBtn.addEventListener('click', toggleWorkingAlert);
+
+//Fixing breaking of newsletter email input box
+const newsletterEmailFix = (element) => {
+    let parent = element.parentElement.parentElement;
+    console.log(parent);
+    parent.style.height='40vh';
+}
