@@ -549,7 +549,7 @@ footer #apple-logo,
 
 /* Responseiveness */
 
-@media screen and (max-width: 899px) {
+@media (max-width: 899px) {
   .section-p1 {
     padding: 40px;
   }
@@ -609,6 +609,10 @@ footer #apple-logo,
   #features .fe-box {
     margin: 15px;
     width: 30vw;
+  }
+
+  #features .fe-box:hover {
+    width: 32vw;
   }
 
   #feature-products .product-container {

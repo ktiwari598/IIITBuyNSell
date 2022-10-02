@@ -71,4 +71,3 @@ const toggleWorkingAlert = () => {
 }
 appleInstallBtn.addEventListener('click', toggleWorkingAlert);
 googleInstallBtn.addEventListener('click', toggleWorkingAlert);
-console.log(googleInstall);
