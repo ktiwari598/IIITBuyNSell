@@ -24,7 +24,11 @@ const toggleOffLogin = () => {
 }
 
 let loginBtn = document.getElementById('login-btn');
-loginBtn.addEventListener('click', toggleOnLogin);
+loginBtn.addEventListener('click', () => {
+        toggleOnLogin(),
+        toggleOffNavbar()
+    }
+);
 
 let closeBtn = document.getElementById('close-btn');
 closeBtn.addEventListener('click',toggleOffLogin);

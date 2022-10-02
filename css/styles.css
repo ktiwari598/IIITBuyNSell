@@ -596,6 +596,11 @@ footer #apple-logo,
     font-size: 20px;
   }
 
+  #login .popup {
+    width: 60vw;
+    padding: 50px 40px;
+  }
+
   #hero {
     height: 55vh;
     padding: 0 20px;
@@ -608,11 +613,11 @@ footer #apple-logo,
 
   #features .fe-box {
     margin: 15px;
-    width: 30vw;
+    width: 32vw;
   }
 
   #features .fe-box:hover {
-    width: 32vw;
+    width: 34vw;
   }
 
   #feature-products .product-container {
@@ -657,6 +662,10 @@ footer #apple-logo,
 
   #navbar {
     width: 50vw;
+  }
+
+  #login .popup {
+    width: 80vw;
   }
 
   #hero {
