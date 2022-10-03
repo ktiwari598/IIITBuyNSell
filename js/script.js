@@ -37,10 +37,13 @@ closeBtn.addEventListener('click',toggleOffLogin);
 const bgColors = ['#fddde4', '#cdebbc', '#d1e8f2', '#cdd4f8','#f6dbf6'];
 let feature = document.getElementById('features');
 let count = 0;
-Array.from(feature.children).forEach(child => {
-    let content = child.children[1];
-    content.style.backgroundColor = bgColors[count++];
-});
+if(feature) {
+    Array.from(feature.children).forEach(child => {
+        let content = child.children[1];
+        content.style.backgroundColor = bgColors[count++];
+    });
+}
+
 
 //responsive navbar with hamburger icon
 // open navbar
