@@ -43,6 +43,26 @@
   color: #684848;
 }
 
+#pagination {
+  text-align: center;
+}
+
+#pagination a {
+  text-decoration: none;
+  padding: 15px 20px;
+  background-color: #088178;
+  color: #fff;
+  font-weight: 800;
+  border-radius: 4px;
+}
+
+#pagination a.page_active,
+#pagination a:hover {
+  background-color: #eb9a9a;
+}
+
+/* Media Queries */
+
 @media (max-width: 499px) {
   #shop-hero p {
     font-size: 12px;

@@ -1,7 +1,6 @@
 //giving underline to nav element
 const underlineNavElement = (element) => {
     let grandParent = element.parentElement.parentElement;
-    console.log(grandParent);
     let childrens = grandParent.children;
     Array.from(childrens).forEach((child) => {
         if(child.children[0].classList.contains('active')) {

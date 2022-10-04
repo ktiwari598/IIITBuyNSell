@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product</title>
+    <script
+      src="https://kit.fontawesome.com/777cabdc99.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/shop_style.css" />
+    <link rel="stylesheet" href="css/product.css" />
+  </head>
+  <body>
+    <section id="header">
+      <a href="#"
+        ><img src="images/buysell.png" class="logo" id="logo" alt="logo"
+      /></a>
+      <div>
+        <ul id="navbar">
+          <li>
+            <a href="index.html" onclick="underlineNavElement(this)">Home</a>
+          </li>
+          <li>
+            <a class="active" href="#" onclick="underlineNavElement(this)"
+              >Buy</a
+            >
+          </li>
+          <li><a href="#" onclick="underlineNavElement(this)">Sell</a></li>
+          <li>
+            <a href="#" onclick="underlineNavElement(this)">Lost&Found</a>
+          </li>
+          <li><a href="#" onclick="underlineNavElement(this)">About</a></li>
+          <li>
+            <a href="#">
+              <div id="login-btn">
+                <h6>Login</h6>
+              </div>
+            </a>
+          </li>
+          <a href="#" id="close"><i class="fas fa-times"></i></a>
+        </ul>
+      </div>
+      <div class="mobile">
+        <a href="#" id="ham-bar"><i class="fas fa-bars"></i></a>
+      </div>
+    </section>
+    <section id="login">
+      <div class="popup">
+        <h4>Login</h4>
+        <div class="close-btn" id="close-btn">&times;</div>
+        <div class="form">
+          <div class="form-element">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter email"
+            />
+          </div>
+          <div class="form-element">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Enter password"
+            />
+          </div>
+          <div class="form-element">
+            <input type="checkbox" name="checkbox" id="remember-me" />
+            <label for="remember-me">Remember me</label>
+          </div>
+          <div class="form-element"><button>Submit</button></div>
+          <div class="form-element"><a href="#">Forgot Password?</a></div>
+        </div>
+      </div>
+    </section>
+    <section id="product-details" class="section-p1">
+      <div class="pro-main-details">
+        <div class="single-pro-image">
+          <img src="images/products/p2/p2_1.png" width="60%" alt="image" />
+          <div class="prod-desc">
+            <h4>Product Details</h4>
+            <span>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi
+              facilis, sapiente mollitia itaque, quaerat soluta odit quo autem
+            </span>
+          </div>
+        </div>
+        <div class="single-pro-details">
+          <h6>Home / Watches</h6>
+          <h4>Boat smart watch</h4>
+          <h2>Rs 1500</h2>
+          <button class="normal">Add to favorites</button>
+          <h4>Seller Details</h4>
+          <div class="pro-seller">
+            <h6>Name : Ashok Khemka</h6>
+            <h6>RollNo : 2056214</h6>
+            <h6>Contact : xxxxxx4512</h6>
+          </div>
+        </div>
+      </div>
+      <div class="payment-details">
+        <h4>
+          Sorry buddy! We are working on payment gateway! Please contact the
+          seller for purchasing the item
+        </h4>
+      </div>
+    </section>
+    <section id="newsletter" class="section-p1 section-m1">
+      <div class="newstext">
+        <h4>SignUp for Newsletters</h4>
+        <p>
+          Get email updates about our latest shops and
+          <span>special offers</span>
+        </p>
+      </div>
+      <div class="subscribe">
+        <input
+          type="text"
+          placeholder="your email address"
+          id="newsletter-email"
+          onclick="newsletterEmailFix(this)"
+        />
+        <button class="normal">Sign up</button>
+      </div>
+    </section>
+    <footer class="section-p1">
+      <div class="col">
+        <img
+          src="images/buysell.png"
+          alt="logo"
+          class="small-image footer-logo-image"
+        />
+        <h4>Contact</h4>
+        <p>
+          <strong>Address : </strong>Mehgawan, Dumna Airport Road, IIITDM
+          Jabalpur (482005)
+        </p>
+        <p><strong>Phone : </strong> +011 22548512, (+91) 8541236500</p>
+        <p><strong>Hours : </strong>10:00 to 17:0, Monday to Friday</p>
+        <div class="follow">
+          <h4>Follow Us</h4>
+          <div class="follow-icons">
+            <i class="fab fa-facebook-square"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-pinterest"></i>
+            <i class="fab fa-youtube"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col install-app">
+        <h4>About</h4>
+        <a href="#">About Us</a>
+        <a href="#">Delivery Information</a>
+        <a href="#">Privacy policy</a>
+        <a href="#">Terms & Condition</a>
+        <a href="#">Contact Us</a>
+      </div>
+      <div class="col">
+        <h4>Install App</h4>
+        <p>From App Store or Google Play</p>
+        <div class="install-logo">
+          <img
+            id="apple-logo"
+            src="images/footer/apple.png"
+            alt="apple-store"
+            class="small-image"
+          />
+          <img
+            id="google-logo"
+            src="images/footer/google.png"
+            alt="google-play-store"
+            class="small-image"
+          />
+        </div>
+        <p>Secured Payment Gateways</p>
+        <img
+          src="images/footer/payment.png"
+          alt="payment gateway"
+          class="mid-image"
+        />
+      </div>
+      <div class="copyright">
+        <p>copyright @2022 - IIIT Buy&Sell</p>
+      </div>
+    </footer>
+    <script src="js/script.js"></script>
+    <script src="js/shop_script"></script>
+  </body>
+</html>

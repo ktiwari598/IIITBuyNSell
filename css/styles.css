@@ -312,9 +312,12 @@ body {
   text-align: center;
 }
 
-#feature-products h6,
-h4 {
+#feature-products h6 {
   margin: 5px 0 50px;
+}
+
+#shop-features #feature-products h4 {
+  margin-bottom: 30px;
 }
 
 #feature-products .product-container {
@@ -395,7 +398,7 @@ h4 {
   align-items: center;
   text-align: center;
   background-image: url("../images/banner/b1.jpeg");
-  height: 30vh;
+  height: 40vh;
   background-size: cover;
   background-position: center;
 }
