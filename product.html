@@ -14,6 +14,20 @@
     <link rel="stylesheet" href="css/product.css" />
   </head>
   <body>
+    <script>
+      window.onload = function () {
+        let prodDetails = localStorage.getItem("productDetails");
+        if (prodDetails) {
+          console.log(prodDetails);
+          prodDetails = JSON.parse(prodDetails);
+          let mainImage = document.getElementById("main-image");
+          mainImage.src = prodDetails.image;
+          let title = document.getElementById("single-product-details")
+            .children[1];
+          title.textContent = prodDetails.title;
+        }
+      };
+    </script>
     <section id="header">
       <a href="#"
         ><img src="images/buysell.png" class="logo" id="logo" alt="logo"
@@ -24,9 +38,7 @@
             <a href="index.html" onclick="underlineNavElement(this)">Home</a>
           </li>
           <li>
-            <a class="active" href="#" onclick="underlineNavElement(this)"
-              >Buy</a
-            >
+            <a href="shop.html" onclick="underlineNavElement(this)">Buy</a>
           </li>
           <li><a href="#" onclick="underlineNavElement(this)">Sell</a></li>
           <li>
@@ -82,7 +94,12 @@
     <section id="product-details" class="section-p1">
       <div class="pro-main-details">
         <div class="single-pro-image">
-          <img src="images/products/p2/p2_1.png" width="60%" alt="image" />
+          <img
+            id="main-image"
+            src="images/products/p2/p2_1.png"
+            width="50%"
+            alt="image"
+          />
           <div class="prod-desc">
             <h4>Product Details</h4>
             <span>
@@ -91,7 +108,7 @@
             </span>
           </div>
         </div>
-        <div class="single-pro-details">
+        <div class="single-pro-details" id="single-product-details">
           <h6>Home / Watches</h6>
           <h4>Boat smart watch</h4>
           <h2>Rs 1500</h2>

@@ -49,7 +49,6 @@ if(feature) {
 
 let navbar = document.getElementById('navbar');
 let bar = document.getElementById('ham-bar');
-console.log(bar);
 const toggleOnNavbar = () => {
     console.log(navbar);
     navbar.classList.add('active');
@@ -58,7 +57,7 @@ bar.addEventListener('click', toggleOnNavbar);
 
 //close navbar
 let close = document.getElementById('close');
-console.log(close);
+
 const toggleOffNavbar = () => {
     navbar.classList.remove('active');
 }
