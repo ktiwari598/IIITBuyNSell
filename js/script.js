@@ -81,3 +81,13 @@ const newsletterEmailFix = (element) => {
     console.log(parent);
     parent.style.height='40vh';
 }
+
+// save product details into localStorage
+const saveProductDetails = (element) => {
+    const prodDetails = {
+        image: element.firstElementChild.src,
+        title: element.children[1].children[1].textContent
+    };
+    localStorage.setItem('productDetails', JSON.stringify(prodDetails));
+    window.location.href='/IIITBuyNSell/product.html';
+}

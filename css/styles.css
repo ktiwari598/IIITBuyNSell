@@ -308,6 +308,10 @@ body {
 }
 
 /* Feature Products */
+#shop-features {
+  text-align: center;
+}
+
 #feature-products {
   text-align: center;
 }
