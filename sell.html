@@ -4,30 +4,16 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Product</title>
+    <title>Buy</title>
     <script
       src="https://kit.fontawesome.com/777cabdc99.js"
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/shop_style.css" />
-    <link rel="stylesheet" href="css/product.css" />
+    <link rel="stylesheet" href="css/sell.css" />
   </head>
   <body>
-    <script>
-      window.onload = function () {
-        let prodDetails = localStorage.getItem("productDetails");
-        if (prodDetails) {
-          console.log(prodDetails);
-          prodDetails = JSON.parse(prodDetails);
-          let mainImage = document.getElementById("main-image");
-          mainImage.src = prodDetails.image;
-          let title = document.getElementById("single-product-details")
-            .children[1];
-          title.textContent = prodDetails.title;
-        }
-      };
-    </script>
     <section id="header">
       <a href="#"
         ><img src="images/buysell.png" class="logo" id="logo" alt="logo"
@@ -41,7 +27,12 @@
             <a href="shop.html" onclick="underlineNavElement(this)">Buy</a>
           </li>
           <li>
-            <a href="shop.html" onclick="underlineNavElement(this)">Sell</a>
+            <a
+              class="active"
+              href="sell.html"
+              onclick="underlineNavElement(this)"
+              >Sell</a
+            >
           </li>
           <li>
             <a href="#" onclick="underlineNavElement(this)">Lost&Found</a>
@@ -60,6 +51,10 @@
       <div class="mobile">
         <a href="#" id="ham-bar"><i class="fas fa-bars"></i></a>
       </div>
+    </section>
+    <section id="shop-hero">
+      <h3>#Stay Home</h3>
+      <p>Sell your products with profitable price</p>
     </section>
     <section id="login">
       <div class="popup">
@@ -93,41 +88,63 @@
         </div>
       </div>
     </section>
-    <section id="product-details" class="section-p1">
-      <div class="pro-main-details">
-        <div class="single-pro-image">
-          <img
-            id="main-image"
-            src="images/products/p2/p2_1.png"
-            width="50%"
-            alt="image"
-          />
-          <div class="prod-desc">
-            <h4>Product Details</h4>
-            <span>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi
-              facilis, sapiente mollitia itaque, quaerat soluta odit quo autem
-            </span>
+    <section id="sell-product" class="section-m1">
+      <div class="container">
+        <header>Sell Products</header>
+        <form action="#">
+          <div class="details personal">
+            <span class="title">Personal Details</span>
+            <div class="fields">
+              <div class="input-field">
+                <label for="name">Roll No</label>
+                <input type="number" name="rollno" id="rollno" required />
+              </div>
+              <div class="input-field">
+                <label for="name">Full Name</label>
+                <input type="text" name="name" id="name" required />
+              </div>
+            </div>
+            <div class="fields">
+              <div class="input-field">
+                <label for="name">Email</label>
+                <input type="email" name="email" id="email" required />
+              </div>
+              <div class="input-field">
+                <label for="name">Contact</label>
+                <input type="number" name="contact" id="contact" required />
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="single-pro-details" id="single-product-details">
-          <h6>Home / Watches</h6>
-          <h4>Boat smart watch</h4>
-          <h2>Rs 1500</h2>
-          <button class="normal">Add to favorites</button>
-          <h4>Seller Details</h4>
-          <div class="pro-seller">
-            <h6>Name : Ashok Khemka</h6>
-            <h6>RollNo : 2056214</h6>
-            <h6>Contact : xxxxxx4512</h6>
+          <div class="details product">
+            <span class="title">Item Details</span>
+            <div class="fields">
+              <div class="input-field">
+                <label for="name">Title</label>
+                <input type="text" name="title" id="title" required />
+              </div>
+              <div class="input-field">
+                <label for="price">Price(Rs)</label>
+                <input type="number" name="price" id="price" required />
+              </div>
+            </div>
+            <div class="fields">
+              <div class="input-field">
+                <label for="name">Category</label>
+                <input type="number" name="rollno" id="rollno" required />
+              </div>
+              <div class="input-field">
+                <label for="desc">Description</label>
+                <input type="text" name="contact" id="contact" required />
+              </div>
+            </div>
+            <div class="upload-file section-m1">
+              <input type="file" name="image" id="file-image" required />
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="payment-details">
-        <h4>
-          Sorry buddy! We are working on payment gateway! Please contact the
-          seller for purchasing the item
-        </h4>
+          <div class="submit">
+            <input type="submit" value="Submit" />
+          </div>
+        </form>
       </div>
     </section>
     <section id="newsletter" class="section-p1 section-m1">

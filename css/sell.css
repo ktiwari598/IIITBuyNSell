@@ -1,0 +1,111 @@
+#shop-hero {
+  background: url("../images/banner/b3.jpg") no-repeat;
+  background-size: cover;
+}
+
+#sell-product {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#sell-product .container {
+  position: relative;
+  max-width: 900px;
+  width: 100%;
+  background: #e3e6f3;
+  border-radius: 6px;
+  padding: 30px;
+  margin: 0 15px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+#sell-product header {
+  position: relative;
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+}
+
+#sell-product header::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  height: 3px;
+  width: 30px;
+  background-color: #4070f4;
+  border-radius: 8px;
+}
+
+#sell-product form {
+  position: relative;
+  margin-top: 16px;
+  min-height: 490px;
+}
+
+#sell-product form .details {
+  margin-top: 30px;
+}
+
+#sell-product form .details .title {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 10px 0;
+  color: #333;
+}
+
+#sell-product form .details .fields {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#sell-product form .details .fields .input-field {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% / 2 - 100px);
+  margin: 8px 0;
+}
+
+.input-field label {
+  font-size: 12px;
+  color: #2e2e2e;
+  font-weight: 600;
+}
+
+.input-field input {
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 400;
+  outline: none;
+  color: #333;
+  height: 42px;
+  margin: 8px 0;
+  padding: 0 15px;
+}
+
+.input-field input:is(:focus, :valid) {
+  box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+#sell-product form .submit input[type="submit"] {
+  display: block;
+  margin: 10px auto;
+  width: 40%;
+  padding: 15px 20px;
+  font-size: 17px;
+  border: 1px solid #aaa;
+  border-radius: 8px;
+  background-color: rgba(221, 238, 234, 0.938);
+}
+
+#sell-product form .submit input[type="submit"]:hover {
+  background-color: #fff;
+  cursor: pointer;
+}
