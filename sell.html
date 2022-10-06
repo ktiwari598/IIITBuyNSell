@@ -96,21 +96,21 @@
             <span class="title">Personal Details</span>
             <div class="fields">
               <div class="input-field">
-                <label for="name">Roll No</label>
+                <label for="name">Roll No *</label>
                 <input type="number" name="rollno" id="rollno" required />
               </div>
               <div class="input-field">
-                <label for="name">Full Name</label>
+                <label for="name">Full Name *</label>
                 <input type="text" name="name" id="name" required />
               </div>
             </div>
             <div class="fields">
               <div class="input-field">
-                <label for="name">Email</label>
+                <label for="name">Email *</label>
                 <input type="email" name="email" id="email" required />
               </div>
               <div class="input-field">
-                <label for="name">Contact</label>
+                <label for="name">Contact *</label>
                 <input type="number" name="contact" id="contact" required />
               </div>
             </div>
@@ -119,22 +119,37 @@
             <span class="title">Item Details</span>
             <div class="fields">
               <div class="input-field">
-                <label for="name">Title</label>
+                <label for="name">Title *</label>
                 <input type="text" name="title" id="title" required />
               </div>
               <div class="input-field">
-                <label for="price">Price(Rs)</label>
+                <label for="price">Price(Rs) *</label>
                 <input type="number" name="price" id="price" required />
               </div>
             </div>
             <div class="fields">
               <div class="input-field">
-                <label for="name">Category</label>
-                <input type="number" name="rollno" id="rollno" required />
+                <label for="name">Category *</label>
+                <select name="category" id="category" required>
+                  <option value="#">Select an option</option>
+                  <option value="watch">Watch</option>
+                  <option value="calculator">Calculator</option>
+                  <option value="phones">Phone</option>
+                  <option value="earbuds">Earbuds</option>
+                  <option value="umbrella">Umbrella</option>
+                  <option value="bicycle">Bicycle</option>
+                  <option value="soundbox">Soundbox</option>
+                </select>
               </div>
               <div class="input-field">
-                <label for="desc">Description</label>
-                <input type="text" name="contact" id="contact" required />
+                <label for="desc">Description *</label>
+                <textarea
+                  id="desc"
+                  name="desc"
+                  rows="1"
+                  cols="33"
+                  placeholder="describe your product"
+                ></textarea>
               </div>
             </div>
             <div class="upload-file section-m1">
