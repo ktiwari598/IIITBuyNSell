@@ -310,13 +310,10 @@ body {
 /* Feature Products */
 #shop-features {
   text-align: center;
+  margin-top: 50px;
 }
 
-#feature-products {
-  text-align: center;
-}
-
-#feature-products h6 {
+#shop-features h6 {
   margin: 5px 0 50px;
 }
 

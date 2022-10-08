@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/shop_style.css" />
     <link rel="stylesheet" href="css/sell.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
   <body>
     <section id="header">
@@ -107,7 +108,7 @@
             <div class="fields">
               <div class="input-field">
                 <label for="name">Email *</label>
-                <input type="email" name="email" id="email" required />
+                <input type="email" name="email" id="sell-email" required />
               </div>
               <div class="input-field">
                 <label for="name">Contact *</label>
@@ -152,12 +153,50 @@
                 ></textarea>
               </div>
             </div>
-            <div class="upload-file section-m1">
-              <input type="file" name="image" id="file-image" required />
+          </div>
+          <div class="file-upload">
+            <div class="wrapper">
+              <h4>File Upload</h4>
+              <div id="file-upload-section">
+                <input
+                  type="file"
+                  name="uploaded-file"
+                  id="uploaded-file"
+                  hidden
+                />
+                <i class="fas fa-cloud-upload-alt"></i>
+                <p>Browse files to upload</p>
+              </div>
+              <!-- <section class="progress-area">
+                <li class="row">
+                  <i class="fas fa-file-alt"></i>
+                  <div class="content">
+                    <div class="upload-details">
+                      <span class="name">image_01.png Uploading..</span>
+                      <span class="percentage">50%</span>
+                    </div>
+                    <div class="progress-bar">
+                      <div class="progress"></div>
+                    </div>
+                  </div>
+                </li>
+              </section> -->
+              <!-- <section class="upload-area">
+                <li class="row">
+                  <div class="content">
+                    <i class="fas fa-file-alt"></i>
+                    <div class="upload-details">
+                      <span class="name">image_01.png Uploaded</span>
+                      <span class="size">70 KB</span>
+                    </div>
+                  </div>
+                  <i class="fas fa-check"></i>
+                </li>
+              </section> -->
             </div>
           </div>
           <div class="submit">
-            <input type="submit" value="Submit" />
+            <input type="submit" value="Submit" id="sell-submit" />
           </div>
         </form>
       </div>
@@ -243,5 +282,6 @@
     </footer>
     <script src="js/script.js"></script>
     <script src="js/shop_script"></script>
+    <script src="js/sell.js"></script>
   </body>
 </html>
