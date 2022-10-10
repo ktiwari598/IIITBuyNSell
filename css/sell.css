@@ -345,6 +345,10 @@ section .row .content .upload-details span {
   #sell-product form .details .fields .input-field {
     width: calc(100% / 2 - 15px);
   }
+
+  #sell-product form .submit #sell-submit {
+    width: 65%;
+  }
 }
 
 @media (max-width: 550px) {
@@ -358,5 +362,8 @@ section .row .content .upload-details span {
     align-items: center;
     justify-content: center;
     min-height: 25vh;
+  }
+  #sell-product form .submit #sell-submit {
+    width: 100%;
   }
 }
