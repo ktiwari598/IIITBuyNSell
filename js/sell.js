@@ -7,6 +7,11 @@ form.addEventListener('click', () => {
 
 fileInput.onchange = ({target}) => {
     let file = target.files[0];
+    let fileName = file.name;
+    if(fileName.length > 10) {
+        let arr = fileName.split(".");
+        fileName = arr[0].slice(0,10) + "..." + arr[arr.length-1];
+    }
     let fileSize = file.size;
     if(file) {
         if(fileSize > (1000000)) {
@@ -24,7 +29,7 @@ fileInput.onchange = ({target}) => {
                   <div class="content">
                     <i class="fas fa-file-alt"></i>
                     <div class="upload-details">
-                      <span class="name">${file.name}</span>
+                      <span class="name">${fileName}</span>
                       <span class="size">${fileSize}</span>
                     </div>
                   </div>
@@ -32,7 +37,6 @@ fileInput.onchange = ({target}) => {
                 </li>`;
         let childrens = parentForm.children;
         if(childrens.item(2)) {
-            console.log(childrens.item(2));
             childrens.item(2).remove();
         }
         parentForm.appendChild(section);
