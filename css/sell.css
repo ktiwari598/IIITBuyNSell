@@ -111,6 +111,7 @@
   border: 1px solid #aaa;
   border-radius: 8px;
   background-color: #fff;
+  color: #333;
 }
 
 #sell-product form .submit input[type="submit"]:hover {
@@ -250,6 +251,87 @@ section .row .content .upload-details span {
   font-size: 16px;
   color: #6990f2;
 }
+
+/* Circular Progress Indicator */
+
+/* #sell-product .circular {
+  height: 70px;
+  width: 70px;
+  position: relative;
+  margin: 20px auto;
+}
+
+#sell-product .inner {
+  position: absolute;
+  z-index: 6;
+  top: 50%;
+  left: 50%;
+  height: 50px;
+  width: 50px;
+  margin: -25px 0 0 -25px;
+  background: #dde6f0;
+  border-radius: 100%;
+  box-shadow: 0 1px 0 rgb(0, 0, 0, 0.2);
+}
+
+#sell-product .numb {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+  font-size: 12px;
+  font-weight: 600;
+  color: #6990f2;
+}
+
+#sell-product .circular .bar {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border-radius: 100%;
+  clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 50% 100%);
+}
+
+#sell-product .circle .bar .progress {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #4158d0;
+  border-radius: 100%;
+  clip-path: polygon(50% 0%, 50% 100%, 0% 100%, 0% 0%);
+}
+
+#sell-product .circle .left .progress {
+  z-index: 1;
+  animation: left 1s linear both;
+  animation-iteration-count: infinite;
+  animation-delay: 0s;
+}
+
+@keyframes left {
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+#sell-product .circle .right {
+  z-index: 3;
+  transform: rotate(180deg);
+}
+
+#sell-product .circle .right .progress {
+  animation: right 0s linear both;
+  animation-delay: \0s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes right {
+  100% {
+    transform: rotate(180deg);
+  }
+} */
 
 @media (max-width: 750px) {
   .container form {
