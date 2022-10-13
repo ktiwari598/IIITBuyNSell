@@ -100,7 +100,12 @@ const submitForm = (formType, submitBtn) => {
         let submit = document.getElementById(submitBtn);
 
         const formData = new FormData();
-        formData.append('image', fileInput.files[0]);
+        if(formType == 'sell-pro') {
+            formData.append('image', fileInput.files[0]);
+        }
+        else {
+            formData.append('image', fileInput2.files[0]);
+        }
 
         const config = {
             onUploadProgress : function(progressEvent) {
@@ -120,8 +125,10 @@ const submitForm = (formType, submitBtn) => {
             console.log(res);
             submit.value = `Submit`;
             Object.assign(submit.style,{background:"#fff",color:"#333"});
-            alert('Wohoo!, you have successfully added a new item for purchase');
-            let parentForm = form.parentElement;
+            (formType == 'sell-pro') ? alert('Wohoo!, you have successfully added a new item for purchase')
+            : alert('Wohoo!, you have successfully added a new item in Lost&Found')
+            let parentForm = (formType == 'sell-pro') ? form.parentElement : form2.parentElement;
+            console.log(parentForm);
             let childrens = parentForm.children;
             if(childrens.item(2)) {
                 childrens.item(2).remove();
