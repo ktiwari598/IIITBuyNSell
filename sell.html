@@ -93,83 +93,99 @@
     </section>
     <section id="sell-product" class="section-m1">
       <div class="container">
-        <header>Sell Products</header>
-        <form action="#">
-          <div class="details personal">
-            <span class="title">Personal Details</span>
-            <div class="fields">
-              <div class="input-field">
-                <label for="name">Roll No *</label>
-                <input type="number" name="rollno" id="rollno" />
-              </div>
-              <div class="input-field">
-                <label for="name">Full Name *</label>
-                <input type="text" name="name" id="name" />
-              </div>
-            </div>
-            <div class="fields">
-              <div class="input-field">
-                <label for="name">Email *</label>
-                <input type="email" name="email" id="sell-email" />
-              </div>
-              <div class="input-field">
-                <label for="name">Contact *</label>
-                <input type="number" name="contact" id="contact" />
-              </div>
-            </div>
+        <div class="form-tabs">
+          <div class="sell-tab">
+            <button
+              onclick="openForm('sell-pro', 'sell-header', 'lostFound-header')"
+            >
+              <header id="sell-header" class="active">Sell Products</header>
+            </button>
           </div>
-          <div class="details product">
-            <span class="title">Item Details</span>
-            <div class="fields">
-              <div class="input-field">
-                <label for="name">Title *</label>
-                <input type="text" name="title" id="title" />
-              </div>
-              <div class="input-field">
-                <label for="price">Price(Rs) *</label>
-                <input type="number" name="price" id="price" />
-              </div>
-            </div>
-            <div class="fields">
-              <div class="input-field">
-                <label for="name">Category *</label>
-                <select name="category" id="category">
-                  <option value="#">Select an option</option>
-                  <option value="watch">Watch</option>
-                  <option value="calculator">Calculator</option>
-                  <option value="phones">Phone</option>
-                  <option value="earbuds">Earbuds</option>
-                  <option value="umbrella">Umbrella</option>
-                  <option value="bicycle">Bicycle</option>
-                  <option value="soundbox">Soundbox</option>
-                </select>
-              </div>
-              <div class="input-field">
-                <label for="desc">Description *</label>
-                <textarea
-                  id="desc"
-                  name="desc"
-                  rows="1"
-                  cols="33"
-                  placeholder="describe your product"
-                ></textarea>
-              </div>
-            </div>
+          <div class="lostNFound-tab">
+            <button
+              onclick="openForm('lostFoundForm', 'lostFound-header', 'sell-header')"
+            >
+              <header id="lostFound-header">Lost&Found</header>
+            </button>
           </div>
-          <div class="file-upload">
-            <div class="wrapper">
-              <h4>File Upload</h4>
-              <div id="file-upload-section">
-                <input
-                  type="file"
-                  name="uploaded-file"
-                  id="uploaded-file"
-                  hidden
-                />
-                <i class="fas fa-cloud-upload-alt"></i>
-                <p>Browse files to upload</p>
+        </div>
+        <div id="sell-pro" class="sell-pro desc-form">
+          <form action="#">
+            <div class="details personal">
+              <span class="title">Personal Details</span>
+              <div class="fields">
+                <div class="input-field">
+                  <label for="name">Roll No *</label>
+                  <input type="number" name="rollno" id="rollno" />
+                </div>
+                <div class="input-field">
+                  <label for="name">Full Name *</label>
+                  <input type="text" name="name" id="name" />
+                </div>
               </div>
-              <!-- <section class="progress-area">
+              <div class="fields">
+                <div class="input-field">
+                  <label for="name">Email *</label>
+                  <input type="email" name="email" id="sell-email" />
+                </div>
+                <div class="input-field">
+                  <label for="name">Contact *</label>
+                  <input type="number" name="contact" id="contact" />
+                </div>
+              </div>
+            </div>
+            <div class="details product">
+              <span class="title">Item Details</span>
+              <div class="fields">
+                <div class="input-field">
+                  <label for="name">Title *</label>
+                  <input type="text" name="title" id="title" />
+                </div>
+                <div class="input-field">
+                  <label for="price">Price(Rs) *</label>
+                  <input type="number" name="price" id="price" />
+                </div>
+              </div>
+              <div class="fields">
+                <div class="input-field">
+                  <label for="name">Category *</label>
+                  <select name="category" id="category">
+                    <option value="#">Select an option</option>
+                    <option value="watch">Watch</option>
+                    <option value="calculator">Calculator</option>
+                    <option value="phones">Phone</option>
+                    <option value="earbuds">Earbuds</option>
+                    <option value="umbrella">Umbrella</option>
+                    <option value="bicycle">Bicycle</option>
+                    <option value="soundbox">Soundbox</option>
+                  </select>
+                </div>
+                <div class="input-field">
+                  <label for="desc">Description *</label>
+                  <textarea
+                    id="desc"
+                    name="desc"
+                    rows="1"
+                    cols="33"
+                    placeholder="describe your product"
+                  ></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="file-upload">
+              <div class="wrapper">
+                <h4>File Upload</h4>
+                <div id="file-upload-section">
+                  <input
+                    type="file"
+                    name="uploaded-file"
+                    id="uploaded-file"
+                    hidden
+                  />
+                  <i class="fas fa-cloud-upload-alt"></i>
+                  <p>Browse files to upload</p>
+                </div>
+                <!-- <section class="progress-area">
                 <li class="row">
                   <i class="fas fa-file-alt"></i>
                   <div class="content">
@@ -183,7 +199,7 @@
                   </div>
                 </li>
               </section> -->
-              <!-- <section class="upload-area">
+                <!-- <section class="upload-area">
                 <li class="row">
                   <div class="content">
                     <i class="fas fa-file-alt"></i>
@@ -195,24 +211,90 @@
                   <i class="fas fa-check"></i>
                 </li>
               </section> -->
-            </div>
-          </div>
-          <div class="submit">
-            <input type="submit" value="Submit" id="sell-submit" />
-          </div>
-          <!-- <div class="circular">
-            <div class="inner"></div>
-            <div class="numb">100%</div>
-            <div class="circle">
-              <div class="bar left">
-                <div class="progress"></div>
-              </div>
-              <div class="bar right">
-                <div class="progress"></div>
               </div>
             </div>
-          </div> -->
-        </form>
+            <div class="submit">
+              <input
+                type="submit"
+                value="Submit"
+                id="sell-submit"
+                onclick="submitForm('sell-pro', 'sell-submit')"
+              />
+            </div>
+          </form>
+        </div>
+        <div
+          id="lostFoundForm"
+          class="lostFoundForm desc-form"
+          style="display: none"
+        >
+          <form action="#">
+            <div class="details personal">
+              <span class="title">Personal Details</span>
+              <div class="fields">
+                <div class="input-field">
+                  <label for="name">Roll No *</label>
+                  <input type="number" name="rollno" />
+                </div>
+                <div class="input-field">
+                  <label for="name">Full Name *</label>
+                  <input type="text" name="name" />
+                </div>
+              </div>
+              <div class="fields">
+                <div class="input-field">
+                  <label for="name">Email *</label>
+                  <input type="email" name="email" />
+                </div>
+                <div class="input-field">
+                  <label for="name">Contact *</label>
+                  <input type="number" name="contact" />
+                </div>
+              </div>
+            </div>
+            <div class="details product">
+              <span class="title">Item Details</span>
+              <div class="fields">
+                <div class="input-field">
+                  <label for="name">Title *</label>
+                  <input type="text" name="title" />
+                </div>
+                <div class="input-field">
+                  <label for="desc">Description *</label>
+                  <textarea
+                    name="desc"
+                    rows="1"
+                    cols="33"
+                    placeholder="describe the product"
+                  ></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="file-upload">
+              <div class="wrapper">
+                <h4>File Upload</h4>
+                <div id="file-upload-section-2">
+                  <input
+                    type="file"
+                    name="uploaded-file"
+                    id="uploaded-file-2"
+                    hidden
+                  />
+                  <i class="fas fa-cloud-upload-alt"></i>
+                  <p>Browse files to upload</p>
+                </div>
+              </div>
+            </div>
+            <div class="submit">
+              <input
+                type="submit"
+                value="Submit"
+                id="sell-submit-2"
+                onclick="submitForm('lostFoundForm', 'sell-submit-2')"
+              />
+            </div>
+          </form>
+        </div>
       </div>
     </section>
     <section id="newsletter" class="section-p1 section-m1">
@@ -295,7 +377,7 @@
       </div>
     </footer>
     <script src="js/script.js"></script>
-    <script src="js/shop_script"></script>
+    <script src="js/shop_script.js"></script>
     <script src="js/sell.js"></script>
   </body>
 </html>

@@ -7,5 +7,4 @@ const flipCard = (element) => {
     else {
         product.style.transform = 'rotateY(0deg)';
     }
-    
 }

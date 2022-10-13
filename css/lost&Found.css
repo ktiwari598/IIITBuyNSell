@@ -47,3 +47,28 @@
 #shop-features .product-container .product .back-product button {
   width: 100%;
 }
+
+/* Found button */
+.lostNfound-item-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0px 40px;
+}
+
+.lostNfound-item-btn a {
+  text-decoration: none;
+  padding: 12px 30px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  color: #fff;
+  font-weight: 800;
+  background-color: #6990f2;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.lostNfound-item-btn a:hover {
+  box-shadow: 5px 5px 40px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}

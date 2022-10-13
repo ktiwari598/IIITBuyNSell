@@ -21,20 +21,40 @@
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
+#sell-product .container .form-tabs {
+  display: flex;
+}
+
+#sell-product .container .form-tabs .sell-tab {
+  width: 50%;
+}
+
+#sell-product .container .form-tabs .lostNFound-tab {
+  width: 50%;
+}
+
+#sell-product .container .form-tabs button {
+  padding: 10px;
+  border: none;
+  outline: none;
+  background-color: #e3e6f3;
+}
+
 #sell-product header {
   position: relative;
   font-size: 20px;
   font-weight: 600;
   color: #333;
+  cursor: pointer;
 }
 
-#sell-product header::before {
+#sell-product header.active::after {
   content: "";
   position: absolute;
   left: 0;
   bottom: -3px;
   height: 3px;
-  width: 30px;
+  width: 50px;
   background-color: #4070f4;
   border-radius: 8px;
 }
@@ -143,7 +163,8 @@
   text-align: center;
 }
 
-.wrapper #file-upload-section {
+.wrapper #file-upload-section,
+.wrapper #file-upload-section-2 {
   height: 167px;
   display: flex;
   flex-direction: column;
@@ -159,11 +180,17 @@
   color: #6990f2;
 }
 
-#file-upload-section svg {
+#file-upload-section-2 :where(svg, p) {
+  color: #6990f2;
+}
+
+#file-upload-section svg,
+#file-upload-section-2 svg {
   font-size: 50px;
 }
 
-#file-upload-section p {
+#file-upload-section p,
+#file-upload-section-2 p {
   font-size: 14px;
   margin-top: 15px;
 }
@@ -346,24 +373,30 @@ section .row .content .upload-details span {
     width: calc(100% / 2 - 15px);
   }
 
-  #sell-product form .submit #sell-submit {
+  #sell-product form .submit #sell-submit,
+  #sell-product form .submit #sell-submit-2 {
     width: 65%;
   }
 }
 
 @media (max-width: 550px) {
+  #sell-product header {
+    font-size: 15px;
+  }
+
   #sell-product form .details .fields .input-field {
     width: 100%;
   }
 
   #sell-product .file-upload {
-    margin-top: 0px;
+    margin-top: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 25vh;
   }
-  #sell-product form .submit #sell-submit {
+  #sell-product form .submit #sell-submit,
+  #sell-product form .submit #sell-submit-2 {
     width: 100%;
   }
 }
