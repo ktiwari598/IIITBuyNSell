@@ -78,12 +78,12 @@ googleInstallBtn.addEventListener('click', toggleWorkingAlert);
 //Fixing breaking of newsletter email input box
 const newsletterEmailFix = (element) => {
     let parent = element.parentElement.parentElement;
-    console.log(parent);
     parent.style.height='40vh';
 }
 
 // save product details into localStorage
 const saveProductDetails = (element) => {
+    console.log(element);
     const prodDetails = {
         image: element.firstElementChild.src,
         title: element.children[1].children[1].textContent

@@ -92,14 +92,12 @@ form2.addEventListener('click', () => {
 const submitForm = (formType, submitBtn) => {
 
     let mainForm = document.getElementById(formType);
-    mainForm = mainForm.firstElementChild;
 
     mainForm.addEventListener('submit', function(e) {
         e.preventDefault();
 
         let submit = document.getElementById(submitBtn);
-
-        const formData = new FormData();
+        let formData = new FormData(mainForm.children[0]);
         if(formType == 'sell-pro') {
             formData.append('image', fileInput.files[0]);
         }
@@ -107,34 +105,52 @@ const submitForm = (formType, submitBtn) => {
             formData.append('image', fileInput2.files[0]);
         }
 
-        const config = {
-            onUploadProgress : function(progressEvent) {
-                let percentCompleted = ((progressEvent.loaded / progressEvent.total) * 100).toFixed(0);
-                //percentCompleted = Math.max(0, percentCompleted-10);
-                submit.value = `Uploading Image file ... ${percentCompleted}%`;
-                Object.assign(submit.style,{background:"#7c9bf0",color:"#fff"});
-                if(percentCompleted == 100) {
-                    submit.value = `please wait..`;
-                }
-            }
+        let formContent = [...formData];
+        console.log(formContent[9][1]);
+        if(formContent[9][1] != 'undefined') {
+            let loading = document.getElementById('loading');
+            loading.style.display = 'block';
+            fetch('https://httpbin.org/post', {
+            method: 'POST',
+            body: formData
+            })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                loading.style.display = 'none';
+                let alertBox = document.getElementById('alert-box');
+                alertBox.style.display = 'block';
+            })
+            .catch(e => console.log(e));
         }
+        // const config = {
+        //     onUploadProgress : function(progressEvent) {
+        //         let percentCompleted = ((progressEvent.loaded / progressEvent.total) * 100).toFixed(0);
+        //         //percentCompleted = Math.max(0, percentCompleted-10);
+        //         submit.value = `Uploading Image file ... ${percentCompleted}%`;
+        //         Object.assign(submit.style,{background:"#7c9bf0",color:"#fff"});
+        //         if(percentCompleted == 100) {
+        //             submit.value = `please wait..`;
+        //         }
+        //     }
+        // }
 
-        //Axios 
-        axios.post('https://httpbin.org/post', formData, config)
-        .then(res => {
-            console.log(res);
-            submit.value = `Submit`;
-            Object.assign(submit.style,{background:"#fff",color:"#333"});
-            (formType == 'sell-pro') ? alert('Wohoo!, you have successfully added a new item for purchase')
-            : alert('Wohoo!, you have successfully added a new item in Lost&Found')
-            let parentForm = (formType == 'sell-pro') ? form.parentElement : form2.parentElement;
-            console.log(parentForm);
-            let childrens = parentForm.children;
-            if(childrens.item(2)) {
-                childrens.item(2).remove();
-            }
-        })
-        .catch(err => console.log(err));
+        // //Axios 
+        // axios.post('https://httpbin.org/post', formData, config)
+        // .then(res => {
+        //     console.log(res);
+        //     submit.value = `Submit`;
+        //     Object.assign(submit.style,{background:"#fff",color:"#333"});
+        //     (formType == 'sell-pro') ? alert('Wohoo!, you have successfully added a new item for purchase')
+        //     : alert('Wohoo!, you have successfully added a new item in Lost&Found')
+        //     let parentForm = (formType == 'sell-pro') ? form.parentElement : form2.parentElement;
+        //     console.log(parentForm);
+        //     let childrens = parentForm.children;
+        //     if(childrens.item(2)) {
+        //         childrens.item(2).remove();
+        //     }
+        // })
+        // .catch(err => console.log(err));
     });
 
 }
@@ -148,4 +164,10 @@ const openForm = (formType, element1, element2) => {
     
     document.getElementById(element2).classList.remove('active');
     document.getElementById(element1).classList.add('active');
+}
+
+const closeModal = (element) => {
+    let alertBox = document.getElementById('alert-box');
+    alertBox.style.display = 'none';
+    location.reload();
 }
