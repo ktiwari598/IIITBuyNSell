@@ -394,7 +394,7 @@ section .row .content .upload-details span {
 }
 
 /* Modal Content */
-.modal-content {
+#alert-box .modal-content {
   background-color: #fefefe;
   margin: auto;
   padding: 20px;
@@ -485,5 +485,15 @@ section .row .content .upload-details span {
     position: absolute;
     top: 30%;
     left: 23%;
+  }
+
+  #alert-box .modal-content {
+    width: 70%;
+    left: 15%;
+    top: 15%;
+  }
+
+  #alert-box .modal-desc p {
+    font-size: 12px;
   }
 }
