@@ -161,7 +161,8 @@ const openForm = (formType, element1, element2) => {
         descForm[i].style.display = "none";
     }
     document.getElementById(formType).style.display='block';
-    
+    console.log(document.getElementById(element1));
+    console.log(document.getElementById(element2));
     document.getElementById(element2).classList.remove('active');
     document.getElementById(element1).classList.add('active');
 }

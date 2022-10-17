@@ -40,7 +40,9 @@
               >Lost&Found</a
             >
           </li>
-          <li><a href="#" onclick="underlineNavElement(this)">About</a></li>
+          <li>
+            <a href="about.html" onclick="underlineNavElement(this)">About</a>
+          </li>
           <li>
             <a href="#">
               <div id="login-btn">
@@ -94,18 +96,16 @@
     <section id="sell-product" class="section-m1">
       <div class="container">
         <div class="form-tabs">
-          <div class="sell-tab">
-            <button
-              onclick="openForm('sell-pro', 'sell-header', 'lostFound-header')"
-            >
-              <header id="sell-header" class="active">Sell Products</header>
+          <div class="sell-tab active" id="sell-tab">
+            <button onclick="openForm('sell-pro', 'sell-tab', 'lostFoundTab')">
+              <header>Sell Products</header>
             </button>
           </div>
-          <div class="lostNFound-tab">
+          <div class="lostNFound-tab" id="lostFoundTab">
             <button
-              onclick="openForm('lostFoundForm', 'lostFound-header', 'sell-header')"
+              onclick="openForm('lostFoundForm', 'lostFoundTab', 'sell-tab')"
             >
-              <header id="lostFound-header">Lost&Found</header>
+              <header>Lost&Found</header>
             </button>
           </div>
         </div>

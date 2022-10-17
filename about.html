@@ -4,30 +4,16 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Product</title>
+    <title>Home</title>
     <script
       src="https://kit.fontawesome.com/777cabdc99.js"
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/shop_style.css" />
-    <link rel="stylesheet" href="css/product.css" />
+    <link rel="stylesheet" href="css/about.css" />
   </head>
   <body>
-    <script>
-      window.onload = function () {
-        let prodDetails = localStorage.getItem("productDetails");
-        if (prodDetails) {
-          console.log(prodDetails);
-          prodDetails = JSON.parse(prodDetails);
-          let mainImage = document.getElementById("main-image");
-          mainImage.src = prodDetails.image;
-          let title = document.getElementById("single-product-details")
-            .children[1];
-          title.textContent = prodDetails.title;
-        }
-      };
-    </script>
     <section id="header">
       <a href="#"
         ><img src="images/buysell.png" class="logo" id="logo" alt="logo"
@@ -41,7 +27,7 @@
             <a href="shop.html" onclick="underlineNavElement(this)">Buy</a>
           </li>
           <li>
-            <a href="shop.html" onclick="underlineNavElement(this)">Sell</a>
+            <a href="sell.html" onclick="underlineNavElement(this)">Sell</a>
           </li>
           <li>
             <a href="lost&Found.html" onclick="underlineNavElement(this)"
@@ -49,7 +35,12 @@
             >
           </li>
           <li>
-            <a href="about.html" onclick="underlineNavElement(this)">About</a>
+            <a
+              href="about.html"
+              class="active"
+              onclick="underlineNavElement(this)"
+              >About</a
+            >
           </li>
           <li>
             <a href="#">
@@ -64,6 +55,10 @@
       <div class="mobile">
         <a href="#" id="ham-bar"><i class="fas fa-bars"></i></a>
       </div>
+    </section>
+    <section id="shop-hero">
+      <h3>#Connect with Us</h3>
+      <p>Leave a message. We love to hear from you!</p>
     </section>
     <section id="login">
       <div class="popup">
@@ -97,41 +92,40 @@
         </div>
       </div>
     </section>
-    <section id="product-details" class="section-p1">
-      <div class="pro-main-details">
-        <div class="single-pro-image">
-          <img
-            id="main-image"
-            src="images/products/p2/p2_1.png"
-            width="50%"
-            alt="image"
-          />
-          <div class="prod-desc">
-            <h4>Product Details</h4>
-            <span>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi
-              facilis, sapiente mollitia itaque, quaerat soluta odit quo autem
-            </span>
-          </div>
-        </div>
-        <div class="single-pro-details" id="single-product-details">
-          <h6>Home / Watches</h6>
-          <h4>Boat smart watch</h4>
-          <h2>Rs 1500</h2>
-          <button class="normal">Add to favorites</button>
-          <h4>Seller Details</h4>
-          <div class="pro-seller">
-            <h6>Name : Ashok Khemka</h6>
-            <h6>RollNo : 2056214</h6>
-            <h6>Contact : xxxxxx4512</h6>
-          </div>
+    <section id="contact-details" class="section-p1">
+      <div class="details">
+        <span>GET IN TOUCH</span>
+        <h2>Contact us today</h2>
+        <h3>Head Office</h3>
+        <div>
+          <li>
+            <i class="fas fa-map-marker-alt"></i>
+            <p>IIITDM Jabalpur Campus, Dumna Airport Road</p>
+          </li>
+          <li>
+            <i class="fas fa-envelope"></i>
+            <p>karantiwarionline@gmail.com</p>
+          </li>
+          <li>
+            <i class="fas fa-phone-alt"></i>
+            <p>(+91) 7869620238</p>
+          </li>
+          <li>
+            <i class="far fa-clock"></i>
+            <p>Monday to Friday 09:00 AM to 04:00 PM</p>
+          </li>
         </div>
       </div>
-      <div class="payment-details">
-        <h4>
-          Sorry buddy! We are working on payment gateway! Please contact the
-          seller for purchasing the item
-        </h4>
+      <div class="google-map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d53945.59243856825!2d79.99289500377111!3d23.176120030229946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3981a94397365dd3%3A0x5f9aeb812c2678c9!2sIIITDM%20Jabalpur!5e0!3m2!1sen!2sin!4v1665975958234!5m2!1sen!2sin"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
       </div>
     </section>
     <section id="newsletter" class="section-p1 section-m1">
@@ -214,6 +208,6 @@
       </div>
     </footer>
     <script src="js/script.js"></script>
-    <script src="js/shop_script"></script>
+    <script src="js/shop_script.js"></script>
   </body>
 </html>
