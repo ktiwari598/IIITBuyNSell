@@ -119,15 +119,18 @@ body {
 }
 
 #login-btn {
-  padding: 8px;
+  padding: 10px 15px;
   border-radius: 10px;
-  background-color: #3f10e9;
+  background-color: #FF4B2B;
   border: none;
   outline: none;
+  color: white;
 }
 
-#login-btn h6 {
-  color: white;
+#login-btn:hover{
+	background: #fff;
+	color: #FF4B2B;
+	border: 1px solid #FF4B2B;
 }
 
 .mobile,
@@ -141,7 +144,7 @@ body {
   padding: 20px 80px;
   background: url("../images/hero_banner.png") no-repeat #f7f7f7;
   background-position: top 5% left 10%;
-  height: 75vh;
+  height: 85vh;
 }
 
 #hero .hero-content-box {
@@ -160,17 +163,27 @@ body {
 #hero .hero-content-box .hero-content .shop-btn {
   margin-top: 10px;
   display: inline-block;
-  padding: 8px 10px;
+  padding: 8px 15px;
   border-radius: 10px;
-  background-color: #3f10e9;
+  background-color: #FF4B2B;
   border: 0;
   outline: none;
+  cursor: pointer;
 }
 
 #hero .hero-content-box .hero-content .shop-btn a {
   text-decoration: none;
-  color: rgba(250, 242, 242, 0.979);
   font-weight: 800;
+  color: #fff;
+}
+
+#hero .hero-content-box .hero-content .shop-btn:hover {
+  background: #fff;
+	border: 1px solid #FF4B2B;
+}
+
+#hero .hero-content-box .hero-content .shop-btn:hover a{
+  color: #FF4B2B;
 }
 
 /* login popup */
@@ -291,7 +304,6 @@ body {
 #features .fe-box:hover {
   box-shadow: 10px 10px 44px rgba(90, 74, 45, 0.18);
   cursor: pointer;
-  width: 14vw;
   transition: width 300ms ease-in 100ms, box-shadow 100ms ease-in 0ms;
 }
 
@@ -353,6 +365,7 @@ body {
 #feature-products .product .desc {
   text-align: start;
   padding: 10px 0;
+  margin-left: 10px;
 }
 
 #feature-products .product .desc span {

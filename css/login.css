@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+body {
+	font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+main {
+	width: 100vw;
+	height: 100vh;
+	background: #f3e0e2;
+	display: grid;
+	place-content: center;
+}
+.wrapper {
+	width: 20rem;
+	padding: 2.1rem 2rem;
+	border-radius: 0.7rem;
+	display: flex;
+	flex-direction: column;
+	background: #fff;
+	justify-items: center;
+	align-items: center;
+	box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+.wrapper .heading h1 {
+	font-weight: 700;
+	font-size: 2rem;
+}
+.wrapper .social {
+	padding: 1.5rem;
+}
+.wrapper .social .social-links{
+	text-decoration: none;
+	color: #000;
+	font-size: 1.3rem;
+
+}
+.wrapper .social .social-links > .fa-brands{
+	border: 1px solid #E4E4E4;
+	display: inline-block;
+    border-radius: 60px;
+    padding: 0.5em 0.6em;
+	margin-left: 0.5rem;
+}
+
+.form-group {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	align-items:center;
+}
+.form-group p{
+	font-size:0.9rem;
+	opacity:0.9;
+	color: #212121;
+	margin-bottom: 1rem;
+}
+.form-group > input{
+	padding: 0.7rem 0.1rem;
+	margin-bottom: 0.9rem;
+	border: none;
+	width: 100%;
+}
+.form-group > input:focus{
+	outline-offset:none;
+}
+.form-group > ::placeholder{
+	background: #EEEEEE;
+	padding: 0.7rem 0.2rem;
+	text-transform: capitalize;
+}
+
+.login-btns {
+    display: flex;
+    margin: 5px 0;
+}
+
+.btn{
+	font-size: 0.9rem;
+	text-decoration: none;
+    margin: 0 5px;
+}
+.btn-forget{
+	color: #212121;
+	margin-bottom: 1rem;
+}
+.btn-primary{
+	background: #FF4B2B;
+	padding: .6rem 2.4rem;
+	color: #fff;
+	border-radius: 2rem;
+	font-weight: 700;
+	border: 1px solid #FF4B2B;
+	transition: all 200ms linear;
+}
+.btn-primary:hover{
+	background: #fff;
+	color: #FF4B2B;
+	border: 1px solid #FF4B2B;
+}
